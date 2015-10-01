@@ -3,10 +3,7 @@
 dalvik.vm.dex2oat-flags=--no-watch-dog
 
 # Audio
-audio.offload.disable=1
-audio.offload.pcm.16bit.enable=false
-audio.offload.pcm.24bit.enable=false
-audio.offload.gapless.enabled=true
+av.offload.enable=false
 audio.offload.video=false
 
 persist.audio.calfile0=/etc/Bluetooth_cal.acdb
