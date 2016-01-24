@@ -104,9 +104,6 @@ rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ro.use_data_netmgrd=true
 
-# Scheduler
-sys.io.scheduler=bfq
-
 # Security patch level
 ro.lineage.build.vendor_security_patch=2016-08-01
 
