@@ -60,6 +60,9 @@ on init
     chown root qcom_diag /sys/kernel/dropbox/data
 
 on fs
+    wait /dev/block/platform/${ro.boot.bootdevice}
+    symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
+
     mount_all fstab.qcom
     write /sys/kernel/boot_adsp/boot 1
 
