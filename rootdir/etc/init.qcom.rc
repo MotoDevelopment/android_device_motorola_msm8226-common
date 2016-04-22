@@ -205,6 +205,10 @@ on post-fs-data
     # Create directory for cutback
     mkdir /data/misc/cutback 0770 radio wifi
 
+    #create netmgr log dir
+    mkdir /data/misc/netmgr 0770 radio radio
+    chmod 0770 /data/misc/netmgr
+
     # To remove apanic proc entry
     write /proc/apanic_console 1
 
