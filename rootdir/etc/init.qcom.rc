@@ -500,7 +500,7 @@ service location_mq /vendor/bin/location-mq
     group gps
     disabled
 
-service mmi-boot-sh /system/bin/sh /init.mmi.boot.sh
+service mmi-boot-sh /system/bin/init.mmi.boot.sh
     class core
     user root
     oneshot
@@ -524,7 +524,7 @@ service rild1-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
     group root
     oneshot
 
-service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics aps
+service mmi-touch-sh /system/bin/init.mmi.touch.sh synaptics aps
     class late_start
     user root
     oneshot
