@@ -244,6 +244,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.bt.sh \
+    init.qcom.devstart.sh \
+    init.qcom.devwait.sh \
     init.qcom.ril.sh \
     dump_pds.sh
 
