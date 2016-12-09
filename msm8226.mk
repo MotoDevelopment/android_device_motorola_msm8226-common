@@ -192,6 +192,10 @@ PRODUCT_PACKAGES += \
     wcnss_service \
     WCNSS_qcom_wlan_factory_nv.bin
 
+# WiFi HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
