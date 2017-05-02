@@ -74,7 +74,7 @@ persist.timed.enable=true
 ro.qualcomm.cabl=0
 net.early.sockets=0
 vidc.debug.level=1
-ro.vendor.extension_library=/system/vendor/lib/libqti-perfd-client.so
+ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 
 # Radio
 persist.data.qmi.adb_logmask=0
