@@ -158,6 +158,7 @@ bin/dbvc_atvc_property_set:vendor/bin/dbvc_atvc_property_set
 # Perf
 bin/mpdecision:vendor/bin/mpdecision
 vendor/lib/libqc-opt.so
+vendor/lib/libqti-perfd-client.so
 
 # Qualcomm framework
 bin/irsc_util:vendor/bin/irsc_util
