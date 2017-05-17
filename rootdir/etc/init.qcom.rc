@@ -61,6 +61,10 @@ on init
     chown root oem_2950 /sys/kernel/dropbox/event
     chown root oem_2950 /sys/kernel/dropbox/data
 
+    # activate zram
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+
 on fs
     wait /dev/block/platform/${ro.boot.bootdevice}
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -74,16 +78,9 @@ on fs
     wait /cache/pds-dump.img
     mount ext3 loop@/cache/pds-dump.img /pds
     restorecon /pds
-
-    # activate zram
-    write /proc/sys/vm/page-cluster 0
     
     # Start HW service manager early
     start hwservicemanager
-
-on property:sys.boot_completed=1
-    # Enable ZRAM on boot_complete
-    swapon_all fstab.qcom
 
 on late-fs
     # Start services for bootanim
@@ -649,6 +646,9 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 1
 
 on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all fstab.qcom
+
     write /sys/module/lpm_levels/enable_low_power/l2 4
     write /sys/module/msm_pm/modes/cpu0/power_collapse/suspend_enabled 1
     write /sys/module/msm_pm/modes/cpu1/power_collapse/suspend_enabled 1
