@@ -69,4 +69,4 @@
 /sys/devices/f9925000\.i2c/i2c-3/3-0048/temp1_max_hyst      u:object_r:sysfs_thermal:s0
 
 # Vibrator
-/system/vendor/bin/hw/android\.hardware\.vibrator@1\.0-service\.moto8226 u:object_r:hal_vibrator_default_exec:s0
+/system/vendor/bin/hw/android\.hardware\.vibrator@1\.1-service\.moto8226 u:object_r:hal_vibrator_default_exec:s0

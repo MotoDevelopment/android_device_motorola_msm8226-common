@@ -5,7 +5,7 @@ on early-boot
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
 
-service vibrator-1-0 /vendor/bin/hw/android.hardware.vibrator@1.0-service.moto8226
+service vendor.vibrator-1-1 /vendor/bin/hw/android.hardware.vibrator@1.1-service.moto8226
     class hal
     user system
     group system
