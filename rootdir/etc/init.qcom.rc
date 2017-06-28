@@ -505,7 +505,7 @@ service charger /charger
 
 service mpdecision /vendor/bin/mpdecision --avg_comp
     user root
-    group root system
+    group root readproc
     disabled
 
 on property:ro.use_data_netmgrd=false
