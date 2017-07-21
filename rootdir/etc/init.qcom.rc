@@ -569,6 +569,7 @@ service rmt_storage /vendor/bin/rmt_storage
     user root
     group system wakelock
     shutdown critical
+    ioprio rt 0
 
 on property:persist.sys.qc.sub.rdump.on=*
    write /sys/module/subsystem_restart/parameters/enable_ramdumps ${persist.sys.qc.sub.rdump.on}
