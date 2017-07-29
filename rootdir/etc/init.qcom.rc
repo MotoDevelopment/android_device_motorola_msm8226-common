@@ -176,9 +176,6 @@ on post-fs-data
     # To remove apanic proc entry
     write /proc/apanic_console 1
 
-    # Create directory used by power_supply_logger
-    mkdir /data/power_supply_logger 0750 mot_pwric log
-
     # create the necessary data dirs for tpapi with proper permission
     mkdir /dev/tpapi 02770 mot_tpapi mot_tpapi
     mkdir /data/tpapi 02770 mot_tpapi mot_tpapi
@@ -193,8 +190,6 @@ on post-fs-data
     chown mot_pwric mot_pwric /sys/module/qpnp_charger/parameters/chrg_timestamp
     chown root mot_pwric /sys/class/power_supply/battery/capacity
     chown root mot_pwric /sys/class/power_supply/battery/status
-
-    start batt_health
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -450,12 +445,6 @@ service audiod /system/bin/audiod
     class late_start
     user system
     group system
-
-service batt_health /vendor/bin/batt_health
-    class main
-    user mot_pwric
-    group mot_pwric
-    disabled
 
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
