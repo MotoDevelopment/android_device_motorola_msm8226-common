@@ -40,6 +40,7 @@ ro.bluetooth.hfp.ver=1.6
 ro.qualcomm.bt.hci_transport=smd
 
 # Display
+debug.hwui.use_buffer_age=false
 persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196608
 ro.sf.lcd_density=320
