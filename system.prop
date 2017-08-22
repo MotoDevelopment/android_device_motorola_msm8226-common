@@ -54,6 +54,7 @@ persist.loc.nlp_name=com.qualcomm.services.location
 # Media
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
+persist.media.treble_omx=false
 
 # NITZ
 persist.radio.nitz_plmn=
