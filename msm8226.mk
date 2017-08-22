@@ -91,9 +91,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.msm8226 \
     libxml2 \
     libshims_camera \
-    camera.msm8226 \
     Snap
 
 # DRM
