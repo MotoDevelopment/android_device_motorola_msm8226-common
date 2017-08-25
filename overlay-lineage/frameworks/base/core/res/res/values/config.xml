@@ -22,8 +22,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Whether to enable HumanInteractionController by default -->
-    <bool name="config_HICEnabledDefault">false</bool>
+    <!-- <bool name="config_HICEnabledDefault">false</bool> -->
 
     <!-- Configuration to support SIM contact batch operation -->
-    <bool name="config_sim_phonebook_batch_operation">false</bool>
+    <!-- <bool name="config_sim_phonebook_batch_operation">false</bool> -->
 </resources>
