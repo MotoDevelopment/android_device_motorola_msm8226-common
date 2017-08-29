@@ -26,6 +26,7 @@
 #include <cutils/log.h>
 #include <cutils/properties.h>
 
+#include <android-base/properties.h>
 #include <utils/threads.h>
 #include <utils/String8.h>
 #include <hardware/hardware.h>
@@ -73,6 +74,8 @@ const char KEY_QC_SUPPORTED_ZSL_MODES[] = "zsl-values";
 const char KEY_QC_VIDEO_HIGH_FRAME_RATE[] = "video-hfr";
 const char KEY_QC_ZSL[] = "zsl";
 
+using android::base::GetProperty;
+
 static struct hw_module_methods_t camera_module_methods = {
     .open = camera_device_open
 };
@@ -101,19 +104,18 @@ camera_module_t HAL_MODULE_INFO_SYM = {
 
 static int get_product_device()
 {
-    char value[PROPERTY_VALUE_MAX];
-
     if (product_device != UNKNOWN)
         return product_device;
 
-    property_get("ro.product.device", value, "");
-    if (!strncmp(value, "falcon", 6))
+    std::string device = GetProperty("ro.product.device", "");
+
+    if (device == "falcon")
         product_device = FALCON;
-    else if (!strncmp(value, "peregrine", 9))
+    else if (device == "peregrine")
         product_device = PEREGRINE;
-    else if (!strncmp(value, "titan", 5))
+    else if (device == "titan")
         product_device = TITAN;
-    else if (!strncmp(value, "thea", 4))
+    else if (device == "thea")
         product_device = THEA;
     else
         product_device = UNKNOWN;
