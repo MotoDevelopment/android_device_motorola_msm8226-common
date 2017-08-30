@@ -18,6 +18,7 @@ persist.audio.calfile5=/etc/Headset_cal.acdb
 persist.audio.calfile6=/etc/Speaker_cal.acdb
 
 persist.vendor.audio.fluence.voicecall=true
+ro.audio.flinger_standbytime_ms=300
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 
