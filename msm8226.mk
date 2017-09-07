@@ -98,6 +98,7 @@ PRODUCT_PACKAGES += \
     camera.msm8226 \
     libxml2 \
     libshims_camera \
+    libshims_sensorlistener \
     Snap
 
 # DRM
