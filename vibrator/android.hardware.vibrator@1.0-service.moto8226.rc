@@ -1,0 +1,11 @@
+on early-boot
+    # Change ownership and permission for vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+    chmod 0660 /sys/class/timed_output/vibrator/enable
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
+    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
+
+service vibrator-1-0 /vendor/bin/hw/android.hardware.vibrator@1.0-service.moto8226
+    class hal
+    user system
+    group system
