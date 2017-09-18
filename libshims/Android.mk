@@ -66,3 +66,12 @@ LOCAL_SHARED_LIBRARIES := \
     libsensor
 
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := icu56.c
+LOCAL_SHARED_LIBRARIES := libicuuc libicui18n liblog
+LOCAL_MODULE := libshim_qcopt
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
