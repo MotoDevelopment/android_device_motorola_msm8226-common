@@ -1,3 +1,6 @@
 # Motorola service properties
 persist.atvc                u:object_r:atvc_prop:s0
 ro.manufacturedate          u:object_r:manufacturedate_prop:s0
+
+vendor.wlan.driver.ath                 u:object_r:wcnss_prop:s0
+vendor.wlan.driver.config              u:object_r:wcnss_prop:s0
