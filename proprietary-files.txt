@@ -101,12 +101,7 @@ vendor/lib/librpmb.so|930cada51c737dd8f95a94a8013a5caedd3de60e
 vendor/lib/libssd.so|1bfb2ccaa33455a9b9b2e0c4ae34e7586045b299
 
 # GPS
--app/com.qualcomm.location/com.qualcomm.location.apk
--app/com.qualcomm.services.location/com.qualcomm.services.location.apk
 bin/location-mq:vendor/bin/location-mq
-bin/xtwifi-client:vendor/bin/xtwifi-client
-bin/xtwifi-inet-agent:vendor/bin/xtwifi-inet-agent
-etc/permissions/com.qualcomm.location.xml
 etc/gps.conf
 etc/izat.conf
 etc/quipc.conf
@@ -115,20 +110,9 @@ etc/xtwifi.conf
 etc/xtra_root_cert.pem
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
-vendor/lib/libalarmservice_jni.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
-vendor/lib/liblocationservice.so
-vendor/lib/libloc_ext.so
-vendor/lib/liblowi_client.so
-vendor/lib/libquipc_os_api.so
-vendor/lib/libquipc_ulp_adapter.so
-vendor/lib/libulp2.so
-vendor/lib/libxtadapter.so
-vendor/lib/libxtwifi_ulp_adaptor.so
-vendor/lib/libxtwifi_zpp_adaptor.so
-vendor/lib/libxt_native.so
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so

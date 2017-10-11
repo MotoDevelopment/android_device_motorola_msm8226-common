@@ -578,18 +578,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service xtwifi_client /vendor/bin/xtwifi-client
-    class late_start
-    user gps
-    group net_admin wifi inet gps
-    disabled
-
-service xtwifi_inet /vendor/bin/xtwifi-inet-agent
-    class late_start
-    user gps
-    group inet gps
-    disabled
-
 # Charger
 on charger
     write /sys/class/android_usb/android0/enable 0
