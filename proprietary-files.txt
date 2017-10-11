@@ -1,5 +1,5 @@
 # ADSP
-bin/adsprpcd
+bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
@@ -21,14 +21,14 @@ vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
 # Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
+bin/btnvtool:vendor/bin/btnvtool
+bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # Camera
 # vendor/lib/libmmjpeg.so - from shamu
 # vendor/lib/libmmcamera_faceproc.so - from shamu
-bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/libmot_sensorlistener.so
 lib/libmmcamera_ar0543.so
 lib/libmmjpeg_interface.so
@@ -93,7 +93,7 @@ etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 
 # DRM - from seed
-bin/qseecomd|09a738119224d2d0fdd583f6b2c25d3d07299b3c
+bin/qseecomd:vendor/bin/qseecomd|09a738119224d2d0fdd583f6b2c25d3d07299b3c
 vendor/lib/libdrmfs.so|4ef88abe5935fe485963b5a6fb94dd040523d681
 vendor/lib/libdrmtime.so|0724d70f1c7851c2d8b239ab3bbd5b2cadae645a
 vendor/lib/libQSEEComAPI.so|8371b1625921efb5779a644edc6b79ff089104e4
@@ -103,9 +103,9 @@ vendor/lib/libssd.so|1bfb2ccaa33455a9b9b2e0c4ae34e7586045b299
 # GPS
 -app/com.qualcomm.location/com.qualcomm.location.apk
 -app/com.qualcomm.services.location/com.qualcomm.services.location.apk
-bin/location-mq
-bin/xtwifi-client
-bin/xtwifi-inet-agent
+bin/location-mq:vendor/bin/location-mq
+bin/xtwifi-client:vendor/bin/xtwifi-client
+bin/xtwifi-inet-agent:vendor/bin/xtwifi-inet-agent
 etc/permissions/com.qualcomm.location.xml
 etc/gps.conf
 etc/izat.conf
@@ -167,15 +167,15 @@ vendor/lib/libOmxWmaDec.so
 vendor/lib/libSHIMDivxDrm.so
 
 # Moto
-bin/batt_health
-bin/dbvc_atvc_property_set
+bin/batt_health:vendor/bin/batt_health
+bin/dbvc_atvc_property_set:vendor/bin/dbvc_atvc_property_set
 
 # Perf
-bin/mpdecision
+bin/mpdecision:vendor/bin/mpdecision
 vendor/lib/libqti-perfd-client.so
 
 # Qualcomm framework
-bin/irsc_util
+bin/irsc_util:vendor/bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
@@ -195,11 +195,11 @@ vendor/lib/libsmemlog.so
 
 # Radio
 -app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rfs_access
-bin/rmt_storage
+bin/netmgrd:vendor/bin/netmgrd
+bin/qmuxd:vendor/bin/qmuxd
+bin/radish:vendor/bin/radish
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
 bin/qmi_motext_hook
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
@@ -219,13 +219,13 @@ vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 
 # Thermal
-bin/thermal-engine
+bin/thermal-engine:vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
 -app/TimeService/TimeService.apk
-bin/time_daemon
+bin/time_daemon:vendor/bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 

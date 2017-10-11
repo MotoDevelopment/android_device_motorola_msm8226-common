@@ -43,7 +43,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export LD_SHIM_LIBS /system/bin/thermal-engine|libshims_thermal.so:/system/bin/mpdecision|libshims_atomic.so:/system/lib/hw/camera.vendor.msm8226.so|libshims_camera.so:/system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so
+    export LD_SHIM_LIBS /system/vendor/bin/thermal-engine|libshims_thermal.so:/system/vendor/bin/mpdecision|libshims_atomic.so:/system/lib/hw/camera.vendor.msm8226.so|libshims_camera.so:/system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
@@ -429,18 +429,18 @@ on boot
 
 # Services start here
 
-service adsprpcd /system/bin/adsprpcd
+service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
 
-service atvc_core /system/bin/dbvc_atvc_property_set
+service atvc_core /vendor/bin/dbvc_atvc_property_set
     class core
     user mot_atvc
     group mot_tpapi
     oneshot
 
-service atvc /system/bin/dbvc_atvc_property_set
+service atvc /vendor/bin/dbvc_atvc_property_set
     class late_start
     user mot_atvc
     group mot_tpapi
@@ -451,7 +451,7 @@ service audiod /system/bin/audiod
     user system
     group system
 
-service batt_health /system/bin/batt_health
+service batt_health /vendor/bin/batt_health
     class main
     user mot_pwric
     group mot_pwric
@@ -470,12 +470,12 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     disabled
     oneshot
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /vendor/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
 
-service location_mq /system/bin/location-mq
+service location_mq /vendor/bin/location-mq
     class late_start
     user gps
     group gps
@@ -515,7 +515,7 @@ service charger /charger
     group log
     seclabel u:r:charger:s0
 
-service mpdecision /system/bin/mpdecision --avg_comp
+service mpdecision /vendor/bin/mpdecision --avg_comp
     user root
     group root system
     disabled
@@ -523,32 +523,32 @@ service mpdecision /system/bin/mpdecision --avg_comp
 on property:ro.use_data_netmgrd=false
     stop netmgrd
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
 
-service qmuxd /system/bin/qmuxd
+service qmuxd /vendor/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth gps qcom_diag
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /vendor/bin/qseecomd
     class late_start
     user root
     group root
 
-service rfs_access /system/bin/rfs_access
+service rfs_access /vendor/bin/rfs_access
    class core
    user system
    group system net_raw
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
@@ -556,17 +556,17 @@ service rmt_storage /system/bin/rmt_storage
 on property:persist.sys.qc.sub.rdump.on=*
    write /sys/module/subsystem_restart/parameters/enable_ramdumps ${persist.sys.qc.sub.rdump.on}
 
-service thermal-engine /system/bin/thermal-engine -c /etc/thermal-engine-8226.conf
+service thermal-engine /vendor/bin/thermal-engine -c /etc/thermal-engine-8226.conf
     class main
     user root
     group root
 
-service time_daemon /system/bin/time_daemon
+service time_daemon /vendor/bin/time_daemon
     class late_start
     user root
     group root
 
-service wcnss-service /system/bin/wcnss_service
+service wcnss-service /vendor/bin/wcnss_service
     class late_start
     user root
     group system wifi
@@ -589,13 +589,13 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service xtwifi_client /system/bin/xtwifi-client
+service xtwifi_client /vendor/bin/xtwifi-client
     class late_start
     user gps
     group net_admin wifi inet gps
     disabled
 
-service xtwifi_inet /system/bin/xtwifi-inet-agent
+service xtwifi_inet /vendor/bin/xtwifi-inet-agent
     class late_start
     user gps
     group inet gps
