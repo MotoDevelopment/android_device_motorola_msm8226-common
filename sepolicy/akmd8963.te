@@ -1,5 +1,5 @@
 type akmd8963, domain;
-type akmd8963_exec, exec_type, file_type;
+type akmd8963_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(akmd8963)
 
 allow akmd8963 sensors_data_file:file create_file_perms;
