@@ -56,8 +56,8 @@ on init
     write /proc/self/coredump_filter "0x7f"
 
     # Setup kernel dropbox permissions so that dropboxd can utilize it
-    chown root qcom_diag /sys/kernel/dropbox/event
-    chown root qcom_diag /sys/kernel/dropbox/data
+    chown root oem_2950 /sys/kernel/dropbox/event
+    chown root oem_2950 /sys/kernel/dropbox/data
 
 on fs
     wait /dev/block/platform/${ro.boot.bootdevice}
@@ -160,7 +160,7 @@ on post-fs-data
     mkdir /data/diag_mdlog/logs 0750 log log
 
     # Setup folder for native to transfer data to NativeDropBoxAgent
-    mkdir /data/system/dropbox-add 0730 system qcom_diag
+    mkdir /data/system/dropbox-add 0730 system oem_2950
 
     # backup directory for omadm
     mkdir /pds/public/omadm 0700 radio radio
@@ -525,7 +525,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
 service qmuxd /vendor/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps oem_2950
 
 service qseecomd /vendor/bin/qseecomd
     class late_start
