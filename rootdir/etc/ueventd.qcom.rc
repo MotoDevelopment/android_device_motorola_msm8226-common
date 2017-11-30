@@ -171,10 +171,10 @@
 /dev/block/platform/msm_sdcc.1/by-name/hob          0660 root radio
 /dev/block/platform/msm_sdcc.1/by-name/dhob         0660 root radio
 /dev/block/platform/msm_sdcc.1/by-name/clogo        0660 root radio
-/dev/block/platform/msm_sdcc.1/by-name/cid          0660 root oem_9014
+/dev/block/platform/msm_sdcc.1/by-name/cid          0660 root oem_5014
 /dev/block/platform/msm_sdcc.1/by-name/logs         0640 root system
-/dev/block/platform/msm_sdcc.1/by-name/utags        0660 oem_9004 system
-/dev/block/platform/msm_sdcc.1/by-name/utagsBackup  0660 oem_9004 system
+/dev/block/platform/msm_sdcc.1/by-name/utags        0660 oem_5004 system
+/dev/block/platform/msm_sdcc.1/by-name/utagsBackup  0660 oem_5004 system
 
 # Broadcast devices
 /dev/tsc_mux0             0660   media       media
@@ -256,7 +256,7 @@
 /dev/stm401_ms            0660  compass    compass
 
 # Validity Sensor
-/dev/vfsspi               0660  oem_9015   oem_9015
+/dev/vfsspi               0660  oem_5015   oem_5015
 
 # DTV
 /dev/isdbt                0660  system     system

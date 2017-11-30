@@ -105,10 +105,10 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
    # Setup correct permissions for dbvc and atvc
-    mkdir /pds/public/atvc 0770 oem_9012 shell
+    mkdir /pds/public/atvc 0770 oem_5012 shell
     chmod 0770 /pds/public/atvc
-    mkdir /data/local/dbvc 0750 oem_9004 shell
-    mkdir /data/local/atvc 0775 oem_9004 shell
+    mkdir /data/local/dbvc 0750 oem_5004 shell
+    mkdir /data/local/atvc 0775 oem_5004 shell
 
     # Wifi
     restorecon /data/hostapd
@@ -149,10 +149,10 @@ on post-fs-data
     mkdir /data/data/media 0770 media media
 
    # Create moodle directory that MOODLE APP can write to
-    mkdir /data/local/moodle 0770 graphics oem_9004
+    mkdir /data/local/moodle 0770 graphics oem_5004
 
     # services directory for activation
-    mkdir /pds/public/svcs 0770 system oem_9004
+    mkdir /pds/public/svcs 0770 system oem_5004
     chmod 0770 /pds/public/svcs
 
     # Setup folders for diag_mdlog
@@ -177,19 +177,19 @@ on post-fs-data
     write /proc/apanic_console 1
 
     # create the necessary data dirs for tpapi with proper permission
-    mkdir /dev/tpapi 02770 oem_9007 oem_9007
-    mkdir /data/tpapi 02770 oem_9007 oem_9007
-    mkdir /data/tpapi/etc 02770 oem_9007 oem_9007
-    mkdir /data/tpapi/etc/tpa 02770 oem_9007 oem_9007
-    mkdir /data/tpapi/etc/tpa/persistent 02770 oem_9007 oem_9007
+    mkdir /dev/tpapi 02770 oem_5007 oem_5007
+    mkdir /data/tpapi 02770 oem_5007 oem_5007
+    mkdir /data/tpapi/etc 02770 oem_5007 oem_5007
+    mkdir /data/tpapi/etc/tpa 02770 oem_5007 oem_5007
+    mkdir /data/tpapi/etc/tpa/persistent 02770 oem_5007 oem_5007
 
     # Permissions for battery health daemon
-    chown oem_9001 oem_9001 /sys/module/qpnp_bms/parameters/last_ocv_uv
-    chown oem_9001 oem_9001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity
-    chown oem_9001 oem_9001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity_temp
-    chown oem_9001 oem_9001 /sys/module/qpnp_charger/parameters/chrg_timestamp
-    chown root oem_9001 /sys/class/power_supply/battery/capacity
-    chown root oem_9001 /sys/class/power_supply/battery/status
+    chown oem_5001 oem_5001 /sys/module/qpnp_bms/parameters/last_ocv_uv
+    chown oem_5001 oem_5001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity
+    chown oem_5001 oem_5001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity_temp
+    chown oem_5001 oem_5001 /sys/module/qpnp_charger/parameters/chrg_timestamp
+    chown root oem_5001 /sys/class/power_supply/battery/capacity
+    chown root oem_5001 /sys/class/power_supply/battery/status
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -310,11 +310,11 @@ on boot
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
     # Change the ownership of touch screen files for tcmd
-    chown root oem_9004 /sys/bus/i2c/drivers/aps_ts/5-0034/drv_irq
-    chown root oem_9004 /sys/bus/i2c/drivers/aps_ts/5-0034/hw_irqstat
-    chown root oem_9004 /sys/bus/i2c/drivers/synaptics_dsx_i2c/5-0020/drv_irq
-    chown root oem_9004 /sys/bus/i2c/drivers/synaptics_dsx_i2c/5-0020/hw_irqstat
-    chown root oem_9004 /sys/bus/i2c/drivers/synaptics_dsx_i2c/5-0020/reset
+    chown root oem_5004 /sys/bus/i2c/drivers/aps_ts/5-0034/drv_irq
+    chown root oem_5004 /sys/bus/i2c/drivers/aps_ts/5-0034/hw_irqstat
+    chown root oem_5004 /sys/bus/i2c/drivers/synaptics_dsx_i2c/5-0020/drv_irq
+    chown root oem_5004 /sys/bus/i2c/drivers/synaptics_dsx_i2c/5-0020/hw_irqstat
+    chown root oem_5004 /sys/bus/i2c/drivers/synaptics_dsx_i2c/5-0020/reset
 
     # Change ownership and permission for led
     chown system system /sys/class/leds/red/brightness
@@ -346,13 +346,13 @@ on boot
     chmod 0666 /sys/class/leds/torch-light/brightness
 
     # Permissions for Factory Test of Charging Paths
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_auto_enable
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_ibatt
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_itrick
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_iusb
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_usb_suspend
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_fail_clear
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_usb_otg_ctl
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_auto_enable
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_ibatt
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_itrick
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_iusb
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_suspend
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_fail_clear
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_otg_ctl
 
     # Change ownership and permission for vibrator
     chown system system /sys/class/timed_output/vibrator/enable
@@ -431,14 +431,14 @@ service adsprpcd /vendor/bin/adsprpcd
 
 service atvc_core /vendor/bin/dbvc_atvc_property_set
     class core
-    user oem_9012
-    group oem_9007
+    user oem_5012
+    group oem_5007
     oneshot
 
 service atvc /vendor/bin/dbvc_atvc_property_set
     class late_start
-    user oem_9012
-    group oem_9007
+    user oem_5012
+    group oem_5007
     oneshot
 
 service audiod /system/bin/audiod
