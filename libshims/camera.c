@@ -21,7 +21,7 @@
 #include <cutils/log.h>
 #include <cutils/properties.h>
 
-static typeof(property_get) property_get_real = NULL;
+static typeof(property_get) *property_get_real = NULL;
 
 int property_get(const char *key, char *value, const char *default_value) __overloadable
 {
