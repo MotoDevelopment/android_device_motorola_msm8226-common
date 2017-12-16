@@ -95,6 +95,10 @@ TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
