@@ -164,7 +164,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/hw/camera.vendor.msm8226.so|libshims_camera.so \
     /system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so \
     /system/vendor/lib/libqc-opt.so|libshim_qcopt.so \
-    /system/lib/libmdmcutback.so|libqsap_shim.so 
+    /system/lib/libmdmcutback.so|libqsap_shim.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
