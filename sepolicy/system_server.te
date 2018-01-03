@@ -1,5 +1,9 @@
+allow system_server qmuxd_socket:dir rw_dir_perms;
+allow system_server qmuxd_socket:sock_file { setattr create unlink };
+
 allow system_server sensors_data_file:dir create_dir_perms;
 allow system_server sensors_data_file:fifo_file rw_file_perms;
+allow system_server sensors_device:chr_file  { read open ioctl };
 
 allow system_server sysfs_devices_sensors:dir search;
 allow system_server sysfs_devices_sensors:file rw_file_perms;

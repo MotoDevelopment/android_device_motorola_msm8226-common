@@ -1,0 +1,2 @@
+allow hal_wifi_supplicant_default rild:unix_dgram_socket { sendto write };
+allow hal_wifi_supplicant_default cutback_data_file:sock_file { write };
