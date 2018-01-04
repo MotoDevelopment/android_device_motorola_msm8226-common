@@ -153,6 +153,12 @@ on post-fs-data
    # Create moodle directory that MOODLE APP can write to
     mkdir /data/local/moodle 0770 graphics oem_5004
 
+    # Create perfd deamon related dirs
+    mkdir /data/misc/perfd 0755 root system
+    chmod 2755 /data/misc/perfd
+    mkdir /data/system/perfd 0770 root system
+    chmod 2770 /data/system/perfd
+
     # services directory for activation
     mkdir /pds/public/svcs 0770 system oem_5004
     chmod 0770 /pds/public/svcs
