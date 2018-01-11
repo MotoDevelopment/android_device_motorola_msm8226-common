@@ -156,6 +156,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
+    android.hardware.configstore@1.1-service \
     copybit.msm8226 \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
