@@ -62,7 +62,7 @@ on fs
     wait /dev/block/platform/${ro.boot.bootdevice}
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all fstab.qcom
+    mount_all fstab.qcom --early
     write /sys/kernel/boot_adsp/boot 1
 
     # Create a dump of PDS and mount it
@@ -71,6 +71,18 @@ on fs
     wait /cache/pds-dump.img
     mount ext3 loop@/cache/pds-dump.img /pds
     restorecon /pds
+    
+    # Start HW service manager early
+    start hwservicemanager
+
+on late-fs
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start configstore-hal-1-0
+    start gralloc-2-0
+
+    mount_all fstab.qcom --late
 
     # activate zram
     write /proc/sys/vm/page-cluster 0
