@@ -1,5 +1,24 @@
-allow vendor_init audio_data_file:dir create_dir_perms;
+allow vendor_init {
+  audio_data_file
+  bluetooth_data_file
+  camera_data_file
+  media_rw_data_file
+  radio_data_file
+  system_data_file
+  time_data_file
+  wifi_data_file
+  wpa_socket
+}:dir create_dir_perms;
+
+allow vendor_init audio_data_file:file create_file_perms;
+allow vendor_init bluetooth_data_file:file { setattr };
 allow vendor_init cache_file:dir create_dir_perms;
 allow vendor_init cache_file:file create_file_perms;
+allow vendor_init firmware_file:dir search;
+allow vendor_init firmware_file:file r_file_perms;
+allow vendor_init ipa_dev:chr_file w_file_perms;
+allow vendor_init proc:file w_file_perms;
+allow vendor_init radio_data_file:file create_file_perms;
 allow vendor_init rootfs:dir create_dir_perms;
+allow vendor_init rootfs:file create_file_perms;
 allow vendor_init usermodehelper:file write;
