@@ -18,7 +18,7 @@ enum {
     PROFILE_POWER_SAVE = 0,
     PROFILE_BALANCED,
     PROFILE_HIGH_PERFORMANCE,
-    PROFILE_BIAS_POWER_SAVE,
+    PROFILE_BIAS_POWER,
     PROFILE_MAX
 };
 
@@ -91,7 +91,7 @@ static power_profile profiles[PROFILE_MAX] = {
         .scaling_min_freq = 787200,
         .scaling_min_freq_off = 300000,
     },
-    [PROFILE_BIAS_POWER_SAVE] = {
+    [PROFILE_BIAS_POWER] = {
         .boost = 0,
         .boostpulse_duration = 60000,
         .go_hispeed_load = 90,

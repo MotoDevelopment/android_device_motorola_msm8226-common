@@ -34,7 +34,6 @@ static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 static int boostpulse_fd = -1;
 
 static int current_power_profile = -1;
-static int requested_power_profile = -1;
 
 static int sysfs_write_str(char *path, char *s)
 {
@@ -154,9 +153,19 @@ static void set_power_profile(int profile)
     current_power_profile = profile;
 }
 
-static void power_hint(__attribute__((unused)) struct power_module *module,
-                       power_hint_t hint, void *data)
+static void power_hint(__attribute__((unused)) struct power_module *module, power_hint_t hint, void *data)
 {
+    if (hint == POWER_HINT_SET_PROFILE) {
+        pthread_mutex_lock(&lock);
+        set_power_profile(*(int32_t *)data);
+        pthread_mutex_unlock(&lock);
+        return;
+    }
+
+    // Skip other hints in powersave mode
+    if (current_power_profile == PROFILE_POWER_SAVE)
+        return;
+
     switch (hint) {
     case POWER_HINT_INTERACTION:
         if (!is_profile_valid(current_power_profile)) {
@@ -178,11 +187,6 @@ static void power_hint(__attribute__((unused)) struct power_module *module,
                 pthread_mutex_unlock(&lock);
             }
         }
-        break;
-    case POWER_HINT_SET_PROFILE:
-        pthread_mutex_lock(&lock);
-        set_power_profile(*(int32_t *)data);
-        pthread_mutex_unlock(&lock);
         break;
     case POWER_HINT_LOW_POWER:
         /* This hint is handled by the framework */
@@ -218,6 +222,10 @@ static int power_open(const hw_module_t* module __unused, const char* name,
             dev->init = power_init;
             dev->powerHint = power_hint;
             dev->getFeature = get_feature;
+            dev->setFeature = NULL;
+            dev->get_number_of_platform_modes = NULL;
+            dev->get_platform_low_power_stats = NULL;
+            dev->get_voter_list = NULL;
 
             *device = (hw_device_t*)dev;
         } else
@@ -247,5 +255,9 @@ struct power_module HAL_MODULE_INFO_SYM = {
 
     .init = power_init,
     .powerHint = power_hint,
-    .getFeature = get_feature
+    .getFeature = get_feature,
+    .setFeature = NULL,
+    .get_number_of_platform_modes = NULL,
+    .get_platform_low_power_stats = NULL,
+    .get_voter_list = NULL,
 };
