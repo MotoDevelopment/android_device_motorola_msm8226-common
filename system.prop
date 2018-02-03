@@ -1,6 +1,9 @@
 
 # Art
 dalvik.vm.dex2oat-flags=--no-watch-dog
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-threads=4
 
 # Audio
 audio.offload.disable=true
