@@ -9,6 +9,9 @@
 # Camera
 /data/cam_socket([0-9])+                                    u:object_r:camera_socket:s0
 
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service\.moto8226                          u:object_r:hal_power_default_exec:s0
+
 # MPDecision
 /data/system/default_values                                 u:object_r:mpctl_data_file:s0
 /dev/socket/mpctl                                           u:object_r:mpctl_socket:s0
