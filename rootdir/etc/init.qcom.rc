@@ -65,7 +65,7 @@ on fs
     wait /dev/block/platform/${ro.boot.bootdevice}
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all fstab.qcom --early
+    mount_all /vendor/etc/fstab.qcom --early
     write /sys/kernel/boot_adsp/boot 1
 
     # Create a dump of PDS and mount it
@@ -85,7 +85,7 @@ on late-fs
     start bootanim
     start vendor.gralloc-2-0
 
-    mount_all fstab.qcom --late
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
     # Allow writing to the kernel trace log.
