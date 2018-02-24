@@ -446,11 +446,6 @@ service atvc /vendor/bin/dbvc_atvc_property_set
     group oem_5007
     oneshot
 
-service audiod /system/bin/audiod
-    class late_start
-    user system
-    group system
-
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
