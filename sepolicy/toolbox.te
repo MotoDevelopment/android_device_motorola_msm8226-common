@@ -1,0 +1,9 @@
+allow toolbox bluetooth_prop:file { getattr open read };
+allow toolbox init:fifo_file { getattr write };
+allow toolbox init:unix_stream_socket connectto;
+allow toolbox property_socket:sock_file write; 
+allow toolbox firmware_file:file getattr;
+allow toolbox init:fifo_file ioctl;
+allow toolbox proc:file { open read };
+allow toolbox self:capability dac_override;
+allow toolbox sysfs:file { open read };
