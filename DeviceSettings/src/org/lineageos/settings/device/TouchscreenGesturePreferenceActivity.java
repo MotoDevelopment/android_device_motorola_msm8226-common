@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2016 The CyanogenMod Project
- * Copyright (c) 2017 The LineageOS Project
+ *           (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,37 +15,19 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.cmactions;
+package org.lineageos.settings.device;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 
-import com.cyanogenmod.cmactions.widget.SwitchBar;
-
-public class GesturePreferenceActivity extends SettingsDrawerActivity {
+public class TouchscreenGesturePreferenceActivity extends SettingsDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_main_prefs);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         getFragmentManager().beginTransaction()
-                .replace(R.id.main_content, new GesturePreferenceFragment()).commit();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public SwitchBar getSwitchBar() {
-        return (SwitchBar) findViewById(R.id.switch_bar);
+                .replace(R.id.content_frame, new TouchscreenGesturePreferenceFragment())
+                .commit();
     }
 }

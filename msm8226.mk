@@ -110,6 +110,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
+# DeviceSettings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
