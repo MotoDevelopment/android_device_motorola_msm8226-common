@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += \
     libshims_sensorlistener \
     Snap
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hdrhax:system/vendor/etc/hdrhax
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
