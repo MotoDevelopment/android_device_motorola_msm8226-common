@@ -148,6 +148,9 @@ ifeq ($(HOST_OS),linux)
 endif
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
+# Secdiscard
+TARGET_REMOVE_SECDISCARD_COMMAND := true
+
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 -include device/qcom/sepolicy/legacy-sepolicy.mk
