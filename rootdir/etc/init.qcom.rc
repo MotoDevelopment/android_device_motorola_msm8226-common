@@ -466,7 +466,7 @@ on property:vendor.bluetooth.hciattach=false
 on property:vendor.bluetooth.hciattach=true
     start hciattach
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+service hciattach /system/vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin
