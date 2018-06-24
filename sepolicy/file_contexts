@@ -1,11 +1,11 @@
 # Binaries
-/system/vendor/bin/akmd8963                                 u:object_r:akmd8963_exec:s0
-/system/vendor/bin/dbvc_atvc_property_set                   u:object_r:atvc_exec:s0
-/system/vendor/bin/thermal-engine                           u:object_r:thermal-engine_exec:s0
 /system/bin/sensord                                         u:object_r:sensord_exec:s0
 /system/bin/dump_pds\.sh                                    u:object_r:dump_pds_exec:s0
-/system/bin/init\.mmi\.boot\.sh                             u:object_r:mmi_boot_sh_exec:s0
-/system/bin/init\.mmi\.touch\.sh                            u:object_r:mmi_touch_sh_exec:s0
+/(vendor|system/vendor)/bin/akmd8963                        u:object_r:akmd8963_exec:s0
+/(vendor|system/vendor)/bin/dbvc_atvc_property_set          u:object_r:atvc_exec:s0
+/(vendor|system/vendor)/bin/thermal-engine                  u:object_r:thermal-engine_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.boot\.sh             u:object_r:mmi_boot_sh_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
 
 # Camera
 /data/cam_socket([0-9])+                                    u:object_r:camera_socket:s0
