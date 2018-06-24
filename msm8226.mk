@@ -271,6 +271,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     sensors.msm8226
 
+# TextClassifier
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal/thermal-engine-8226.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8226.conf \
