@@ -137,6 +137,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 # Render
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
+SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
 # Basic dexpreopt
 ifeq ($(HOST_OS),linux)
