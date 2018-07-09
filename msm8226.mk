@@ -102,6 +102,10 @@ PRODUCT_PACKAGES += \
     libshims_sensorlistener \
     Snap
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # Dalvik properties
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
