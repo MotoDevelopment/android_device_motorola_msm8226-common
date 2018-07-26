@@ -27,6 +27,7 @@ ro.vendor.audio.sdk.ssr=false
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 
+persist.vendor.audio.hw.binder.size_kbyte=1024
 ro.af.client_heap_size_kbyte=7168
 vendor.voice.path.for.pcm.voip=true
 vendor.audio.av.streaming.offload.enable=false
