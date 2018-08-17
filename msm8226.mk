@@ -97,10 +97,14 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.msm8226 \
     libxml2 \
+    libshim_skia \
     libshims_camera \
     libshim_qcopt \
     libshims_sensorlistener \
     Snap
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/libskia.so:system/lib/libskia.so
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hdrhax:system/vendor/etc/hdrhax

@@ -88,3 +88,13 @@ LOCAL_MODULE := libshim_qcopt
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := icu58.c
+
+LOCAL_SHARED_LIBRARIES := libicuuc libicui18n liblog
+LOCAL_MODULE := libshim_skia
+LOCAL_MODULE_TAGS := optional
+
+ include $(BUILD_SHARED_LIBRARY)
