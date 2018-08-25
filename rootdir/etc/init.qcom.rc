@@ -120,6 +120,9 @@ on post-fs-data
     mkdir /data/local/dbvc 0750 oem_5004 shell
     mkdir /data/local/atvc 0775 oem_5004 shell
 
+    # Bluetooth
+    chown bluetooth bluetooth /persist/.bt_nv.bin
+
     # Wifi
     restorecon /data/hostapd
     restorecon /data/vendor/wifi/hostapd/wlan0
