@@ -29,7 +29,7 @@ vendor.audio.av.streaming.offload.enable=false
 vendor.audio.offload.buffer.size.kb=32
 
 # Bluetooth
-qcom.bluetooth.soc=smd
+vendor.qcom.bluetooth.soc=pronto
 qcom.bt.le_dev_pwr_class=1
 ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.hfp=true

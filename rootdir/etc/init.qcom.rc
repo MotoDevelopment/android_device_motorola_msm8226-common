@@ -457,10 +457,10 @@ service atvc /vendor/bin/dbvc_atvc_property_set
     group oem_5007
     oneshot
 
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
+on property:vendor.bluetooth.hciattach=false
+    setprop vendor.bluetooth.status off
 
-on property:bluetooth.hciattach=true
+on property:vendor.bluetooth.hciattach=true
     start hciattach
 
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
