@@ -109,6 +109,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hdrhax:system/vendor/etc/hdrhax
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/external_camera_config.xml:system/vendor/etc/external_camera_config.xml
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
