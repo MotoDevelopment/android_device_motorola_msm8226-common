@@ -59,7 +59,6 @@ persist.loc.nlp_name=com.qualcomm.services.location
 
 # Media
 camera2.portability.force_api=1
-persist.media.treble_omx=false
 
 # NITZ
 persist.radio.nitz_plmn=
