@@ -268,3 +268,9 @@
 
 # From moto ueventd.rc
 /dev/assd                 0660   smartcard  smartcard
+
+# sys-fs display
+/sys/class/graphics/fb0     idle_time                0664    system  graphics
+/sys/class/graphics/fb0     dynamic_fps              0664    system  graphics
+/sys/class/graphics/fb0     modes                    0664    system  graphics
+/sys/class/graphics/fb0     mode                     0664    system  graphics

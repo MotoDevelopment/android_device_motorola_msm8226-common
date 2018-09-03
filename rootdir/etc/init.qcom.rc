@@ -269,9 +269,6 @@ on boot
     # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
 
-    chmod 0664 /sys/devices/virtual/graphics/fb0/idle_time
-    chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
-
     setprop wifi.interface wlan0
 
 #   Define TCP buffer sizes for various networks
