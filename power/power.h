@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+#include <hardware/power.h>
+
 enum {
     PROFILE_POWER_SAVE = 0,
     PROFILE_BALANCED,
@@ -108,3 +110,6 @@ static power_profile profiles[PROFILE_MAX] = {
         .scaling_min_freq_off = 300000,
     },
 };
+
+// Custom Lineage hints
+const static power_hint_t POWER_HINT_SET_PROFILE = (power_hint_t)0x00000111;
