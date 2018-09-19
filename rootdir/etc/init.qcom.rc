@@ -682,7 +682,5 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/devices/system/cpu/cpu2/online
     chmod 0664 /sys/devices/system/cpu/cpu3/online
 
-    setprop sys.io.scheduler "bfq"
-
     rm /data/system/default_values
     start mpdecision
