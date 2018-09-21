@@ -50,9 +50,6 @@ on init
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
-    # Support legacy paths
-    symlink /sdcard /storage/sdcard0
-
     # Configure coredump
     write /proc/sys/kernel/core_pattern "|/system/bin/coredump %e %p %t"
     write /proc/self/coredump_filter "0x7f"
