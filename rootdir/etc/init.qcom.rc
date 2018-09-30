@@ -575,7 +575,7 @@ service rmt_storage /vendor/bin/rmt_storage
 on property:persist.sys.qc.sub.rdump.on=*
    write /sys/module/subsystem_restart/parameters/enable_ramdumps ${persist.sys.qc.sub.rdump.on}
 
-service thermal-engine /vendor/bin/thermal-engine -c /etc/thermal-engine-8226.conf
+service thermal-engine /vendor/bin/thermal-engine -c /vendor/etc/thermal-engine-8226.conf
     class main
     user root
     group root
