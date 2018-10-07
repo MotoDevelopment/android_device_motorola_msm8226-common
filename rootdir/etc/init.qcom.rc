@@ -29,14 +29,6 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import init.target.rc
 
 on early-init
-    # Create firmware mount point
-    mkdir /firmware 0771 system system
-
-    # Create PDS mount point
-    mkdir /pds 0755 root root
-
-    # Create modem FSG mount point
-    mkdir /fsg 755 root root
 
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
 
@@ -46,9 +38,6 @@ on early-init
     chmod 0444 /proc/cmdline
 
 on init
-
-    # Set permissions for persist partition
-    mkdir /persist 0771 system system
 
     # Configure coredump
     write /proc/sys/kernel/core_pattern "|/system/bin/coredump %e %p %t"
