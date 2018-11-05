@@ -42,6 +42,9 @@ on early-init
 
     symlink /data/tombstones /tombstones
 
+    # Set permissions so radio can read
+    chmod 0444 /proc/cmdline
+
 on init
 
     # Set permissions for persist partition
