@@ -19,6 +19,6 @@
 
     <!-- This value may be tweaked to save memory on low RAM devices. The value
          is the percentage of camera preview height/width to scale to. -->
-    <integer name="panorama_frame_size_reduction">70</integer>
+    <integer name="panorama_frame_size_reduction">50</integer>
 
 </resources>
