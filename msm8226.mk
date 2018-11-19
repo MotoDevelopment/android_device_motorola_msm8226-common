@@ -62,6 +62,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.motorola.software.storageoptimizer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.software.storageoptimizer.xml \
     $(LOCAL_PATH)/permissions/com.motorola.software.x_line.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.software.x_line.xml
 
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
