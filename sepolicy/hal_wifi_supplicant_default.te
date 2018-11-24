@@ -1,2 +1,4 @@
 allow hal_wifi_supplicant_default rild:unix_dgram_socket { sendto write };
-allow hal_wifi_supplicant_default cutback_data_file:sock_file { write };
+allow hal_wifi_supplicant_default device:chr_file r_file_perms;
+allow hal_wifi_supplicant_default cutback_data_file:sock_file write;
+allow hal_wifi_supplicant_default wifi_vendor_data_file:sock_file create_file_perms;

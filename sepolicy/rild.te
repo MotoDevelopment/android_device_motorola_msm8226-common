@@ -3,6 +3,8 @@ allow rild cutback_data_file:sock_file create_file_perms;
 
 allow rild hal_wifi_supplicant_default:unix_dgram_socket { sendto write };
 
+allow rild proc:file r_file_perms;
+
 allow rild rild:capability dac_override;
 
 allow rild system_file:file execute_no_trans;
