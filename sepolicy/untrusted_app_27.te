@@ -1,2 +1,4 @@
 allow untrusted_app_27 hal_memtrack_hwservice:hwservice_manager find;
-allow untrusted_app_27 kgsl_debugfs:file read;
+allow untrusted_app_27 kgsl_debugfs:file r_file_perms;
+allow untrusted_app_27 proc_zoneinfo:file r_file_perms;
+allow untrusted_app_27 proc_vmstat:file { getattr open };

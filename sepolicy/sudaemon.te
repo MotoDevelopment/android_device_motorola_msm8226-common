@@ -1,3 +1,4 @@
 allow sudaemon activity_service:service_manager find;
 allow sudaemon package_service:service_manager find;
 allow sudaemon serialno_prop:file r_file_perms;
+allow sudaemon radio_service:service_manager find;
