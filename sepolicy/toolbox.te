@@ -12,3 +12,4 @@ allow toolbox manufacturedate_prop:property_service set;
 allow toolbox system_prop:property_service set;
 allow toolbox block_device:blk_file r_file_perms;
 allow toolbox proc_cmdline:file r_file_perms;
+allow toolbox ctl_start_prop:property_service set;
