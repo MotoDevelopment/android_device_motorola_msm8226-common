@@ -1,1 +1,3 @@
 r_dir_file(vold, firmware_file)
+allow vold fsck_exec:file execute_no_trans;
+allow vold_prepare_subdirs userdata_block_device:blk_file read;
