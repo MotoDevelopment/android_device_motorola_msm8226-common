@@ -27,3 +27,4 @@ allow init sysfs_graphics:file setattr;
 allow init sysfs_wlan_fwpath:file setattr;
 allow init system_file:file execute_no_trans;
 allow init sysfs_socinfo:file write;
+allow init vendor_file:file execute_no_trans;
