@@ -66,6 +66,7 @@ on fs
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
 
     mount_all /vendor/etc/fstab.qcom --early
+    write /sys/kernel/boot_adsp/boot 1
 
     # Create a dump of PDS and mount it
     wait /dev/block/platform/msm_sdcc.1/by-name/pds
@@ -87,9 +88,6 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
-    # Start devices by sysfs trigger
-    start devstart_sh
-
     # Allow writing to the kernel trace log.
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
 
@@ -229,9 +227,6 @@ on early-boot
     setrlimit 8 67108864 67108864
     # Allow subsystem (modem etc) debugging
     write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
-
-    # Busy loop to wait for devices booted by devstart_sh just in case device not ready
-    exec - root root system -- /system/vendor/bin/init.qcom.devwait.sh
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -528,13 +523,6 @@ service rild1-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
 service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics aps
     class late_start
     user root
-    oneshot
-
-service devstart_sh /system/vendor/bin/init.qcom.devstart.sh
-    class main
-    user root
-    group root system
-    disabled
     oneshot
 
 service charger /charger
