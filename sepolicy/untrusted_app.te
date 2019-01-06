@@ -1,5 +1,11 @@
+allow untrusted_app device:dir r_dir_perms;
 allow untrusted_app sysfs_zram:dir search;
-allow untrusted_app sysfs_zram:file { getattr open read }; 
-allow untrusted_app proc:file { getattr };
+allow untrusted_app sysfs_zram:file r_file_perms;
+allow untrusted_app pds_file:dir r_dir_perms;
+allow untrusted_app persist_file:dir r_dir_perms;
+allow untrusted_app proc:file getattr;
+allow untrusted_app proc_asound:dir search;
+allow untrusted_app proc_qtaguid_stat:file r_file_perms;
+allow untrusted_app proc_vmstat:file r_file_perms;
+allow untrusted_app rootfs:dir r_dir_perms;
 allowxperm untrusted_app self:udp_socket ioctl SIOCGIFHWADDR;
-allow untrusted_app proc_vmstat:file { getattr open };

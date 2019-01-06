@@ -4,6 +4,10 @@ init_daemon_domain(sensord)
 
 allow sensord self:capability { dac_override fowner fsetid };
 
+allow sensord init:dir r_dir_perms;
+allow sensord init:file r_file_perms;
+allow sensord init:lnk_file r_file_perms;
+
 allow sensord input_device:chr_file r_file_perms;
 allow sensord input_device:dir search;
 
