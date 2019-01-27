@@ -518,11 +518,11 @@ service ril-daemon1 /vendor/bin/hw/rild -c 2
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
     disabled
 
-service rild1-wrapper /vendor/bin/sh /vendor/etc/init.qcom.ril.sh
-    class late_start
-    user root
-    group root
-    oneshot
+on property:persist.radio.multisim.config=dsds
+    enable ril-daemon1
+
+on property:persist.radio.multisim.config=dsda
+    enable ril-daemon1
 
 service mmi-touch-sh /vendor/bin/init.mmi.touch.sh synaptics aps
     class late_start
