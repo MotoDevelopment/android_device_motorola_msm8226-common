@@ -658,7 +658,7 @@ on charger
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
-    swapon_all fstab.qcom
+    swapon_all /vendor/etc/fstab.qcom
 
     write /sys/module/lpm_levels/enable_low_power/l2 4
     write /sys/module/msm_pm/modes/cpu0/power_collapse/suspend_enabled 1
