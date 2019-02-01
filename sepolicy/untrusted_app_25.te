@@ -3,3 +3,5 @@ allow untrusted_app_25 sysfs_net:dir r_dir_perms;
 allow untrusted_app_25 sysfs_net:file r_file_perms;
 allow untrusted_app_25 sysfs:file r_file_perms;
 allow untrusted_app_25 bluetooth_data_file:dir rw_file_perms;
+allow untrusted_app_25 rootfs:dir r_dir_perms;
+allow untrusted_app_25 tombstone_data_file:dir r_dir_perms;
