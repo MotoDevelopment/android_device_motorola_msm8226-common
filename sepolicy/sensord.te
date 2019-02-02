@@ -2,7 +2,9 @@ type sensord, domain;
 type sensord_exec, exec_type, file_type;
 init_daemon_domain(sensord)
 
-allow sensord self:capability { dac_override fowner fsetid };
+allow sensord drmserver:file r_file_perms;
+
+allow sensord self:capability { dac_override fowner fsetid sys_ptrace };
 
 allow sensord init:dir r_dir_perms;
 allow sensord init:file r_file_perms;
