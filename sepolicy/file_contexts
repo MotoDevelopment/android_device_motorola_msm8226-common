@@ -3,7 +3,6 @@
 /system/bin/dump_pds\.sh                                    u:object_r:dump_pds_exec:s0
 /(vendor|system/vendor)/bin/akmd8963                        u:object_r:akmd8963_exec:s0
 /(vendor|system/vendor)/bin/dbvc_atvc_property_set          u:object_r:atvc_exec:s0
-/(vendor|system/vendor)/bin/thermal-engine                  u:object_r:thermal-engine_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.boot\.sh             u:object_r:mmi_boot_sh_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
 
@@ -55,7 +54,7 @@
 /dev/akm8963_dev                                            u:object_r:sensors_device:s0
 /dev/l3g4200d                                               u:object_r:sensors_device:s0
 /dev/lis3dh                                                 u:object_r:sensors_device:s0
-/data/misc/akmdfs.txt                                       u:object_r:sensors_data_file:s0
+/data/misc/akmdfs\.txt                                      u:object_r:sensors_data_file:s0
 /data/misc/sensor(/.*)?                                     u:object_r:sensors_data_file:s0
 /sys/devices/virtual/input/input0(/.*)?                     u:object_r:sysfs_devices_sensors:s0
 /sys/devices/virtual/input/input1(/.*)?                     u:object_r:sysfs_devices_sensors:s0
