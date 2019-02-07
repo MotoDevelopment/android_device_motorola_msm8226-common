@@ -120,9 +120,6 @@ TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(VENDOR_PATH)/lineagehw|**/*.java
-
 # Memory
 MALLOC_SVELTE := true
 
