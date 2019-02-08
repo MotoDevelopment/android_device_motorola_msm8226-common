@@ -15,3 +15,4 @@ allow system_server init:binder call;
 allow system_server proc:file r_file_perms;
 allow system_server dalvikcache_data_file:file execute;
 allow system_server proc:file open;
+allow system_server thermal_service:service_manager find;
