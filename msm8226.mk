@@ -121,7 +121,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libshim_skia \
     libshims_camera \
-    libshim_qcopt \
     libshims_sensorlistener \
     Snap
 
