@@ -119,7 +119,7 @@ persist.timed.enable=true
 ro.qualcomm.cabl=0
 net.early.sockets=0
 vidc.debug.level=1
-ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
+ro.vendor.extension_library=/vendor/lib/libqc-opt.so
 
 # Radio
 persist.data.qmi.adb_logmask=0
@@ -128,7 +128,7 @@ persist.radio.apm_sim_not_pwdn=1
 persist.radio.dfr_mode_set=1
 persist.radio.relay_oprt_change=1
 persist.radio.msgtunnel.start=false
-rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ro.use_data_netmgrd=true
 
