@@ -3,6 +3,5 @@ allow priv_app debugfs_wakeup_sources:file r_file_perms;
 allow priv_app sysfs:file r_file_perms;
 allow priv_app su_exec:file rx_file_perms;
 allow priv_app system_app_data_file:dir getattr;
-allow priv_app sudaemon:unix_stream_socket connectto;
 allow priv_app system_data_file:file rw_file_perms;
 dontaudit priv_app proc_interrupts:file open;
