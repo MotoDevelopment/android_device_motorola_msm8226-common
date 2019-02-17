@@ -68,8 +68,8 @@ on fs
     # Create a dump of PDS and mount it
     wait /dev/block/platform/msm_sdcc.1/by-name/pds
     start dump_pds
-    wait /cache/pds-dump.img
-    mount ext3 loop@/cache/pds-dump.img /pds
+    wait /data/cache/pds-dump.img
+    mount ext3 loop@/data/cache/pds-dump.img /pds
     restorecon /pds
 
     # Start HW service manager early
@@ -399,9 +399,9 @@ on boot
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
 
     # setup trace dir
-    mkdir /cache/trace 0777 root shell
-    chown root shell /cache/trace
-    chmod 0777 /cache/trace
+    mkdir /data/cache/trace 0777 root shell
+    chown root shell /data/cache/trace
+    chmod 0777 /data/cache/trace
 
     # Flash storage isn't a good entropy source, and only causes locking
     # overhead in the kernel. Turn it off.
