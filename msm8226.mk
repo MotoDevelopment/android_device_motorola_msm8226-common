@@ -293,10 +293,14 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # Thermal
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/thermal/thermal-engine-8226.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8226.conf \
-    $(LOCAL_PATH)/thermal/thermal-engine-thea.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-thea.conf \
-    $(LOCAL_PATH)/thermal/thermal-engine-titan.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-titan.conf
+ifneq ($(filter titan, $(TARGET_DEVICE)),)
+    PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/thermal/thermal-engine-titan.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8226.conf
+else
+    PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/thermal/thermal-engine-8226.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8226.conf \
+        $(LOCAL_PATH)/thermal/thermal-engine-thea.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-thea.conf
+endif
 
 PRODUCT_PACKAGES += \
     libshims_thermal
