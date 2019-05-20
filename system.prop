@@ -60,6 +60,7 @@ persist.gps.qc_nlp_in_use=0
 persist.loc.nlp_name=com.qualcomm.services.location
 
 # Media
+debug.stagefright.ccodec=0
 camera2.portability.force_api=1
 
 # Memory optimizations
