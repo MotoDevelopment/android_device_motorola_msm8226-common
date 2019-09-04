@@ -22,6 +22,9 @@ ifeq ($(GO_BUILD),true)
     $(call inherit-product, build/target/product/go_defaults.mk)
 endif
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
