@@ -168,6 +168,9 @@ DONT_DEXPREOPT_PREBUILTS := true
 #BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
 
+BOARD_SEPOLICY_DIRS += \
+	$(VENDOR_PATH)/sepolicy-tmp
+
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/thermal-engine|libshims_thermal.so \
