@@ -176,7 +176,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so \
     /system/vendor/lib/libqc-opt.so|libshim_qcopt.so \
     /system/lib/libmdmcutback.so|libqsap_shim.so \
-    /system/lib/libskia.so|libshim_skia.so
+    /system/lib/libskia.so|libshim_skia.so \
+    /system/vendor/lib/libperipheral_client.so|libshim_binder.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

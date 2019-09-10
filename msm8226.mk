@@ -107,6 +107,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
+# Binder support symbols
+PRODUCT_PACKAGES += \
+    libshim_binder
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
