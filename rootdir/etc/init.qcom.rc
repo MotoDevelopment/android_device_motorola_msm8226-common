@@ -32,8 +32,6 @@ on early-init
 
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
 
-    symlink /data/tombstones /tombstones
-
     # Set permissions so radio can read
     chmod 0444 /proc/cmdline
 
@@ -83,7 +81,7 @@ on post-fs
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
+    mkdir /data/tombstones/modem 0771 system system
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0770 wifi wifi
