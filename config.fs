@@ -8,64 +8,64 @@ value:2951
 value:2952
 
 [AID_VENDOR_MOT_ACCY]
-value:9000
+value:5000
 
 [AID_VENDOR_MOT_PWRIC]
-value:9001
+value:5001
 
 [AID_VENDOR_MOT_USB]
-value:9002
+value:5002
 
 [AID_VENDOR_MOT_DRM]
-value:9003
+value:5003
 
 [AID_VENDOR_MOT_TCMD]
-value:9004
+value:5004
 
 [AID_VENDOR_MOT_SEC_RTC]
-value:9005
+value:5005
 
 [AID_VENDOR_MOT_TOMBSTONE]
-value:9006
+value:5006
 
 [AID_VENDOR_MOT_TPAPI]
-value:9007
+value:5007
 
 [AID_VENDOR_MOT_SECCLKD]
-value:9008
+value:5008
 
 [AID_VENDOR_MOT_WHISPER]
-value:9009
+value:5009
 
 [AID_VENDOR_MOT_CAIF]
-value:9010
+value:5010
 
 [AID_VENDOR_MOT_DLNA]
-value:9011
+value:5011
 
 [AID_VENDOR_MOT_ATVC]
-value:9012
+value:5012
 
 [AID_VENDOR_SPRINT_EXTENSION]
-value:9013
+value:5013
 
 [AID_VENDOR_MOT_DBVC]
-value:9014
+value:5014
 
 [AID_VENDOR_FINGERP]
-value:9015
+value:5015
 
 [AID_VENDOR_MOT_ESDFS]
-value:9016
+value:5016
 
 [AID_VENDOR_POWER]
-value:9017
+value:5017
 
 [AID_VENDOR_ITSON]
-value:9018
+value:5018
 
 [AID_VENDOR_MOT_DTV]
-value:9019
+value:5019
 
 [firmware/]
 mode: 0771
