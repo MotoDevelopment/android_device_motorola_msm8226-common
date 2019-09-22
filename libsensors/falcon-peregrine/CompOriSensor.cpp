@@ -16,7 +16,7 @@
  */
 
 #include <string.h>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include "AkmSysfs.h"
 #include "CompOriSensor.h"

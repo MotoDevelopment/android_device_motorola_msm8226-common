@@ -98,7 +98,7 @@
 #include <pthread.h>
 
 #ifdef TARGET_OS_ANDROID
-#include <cutils/log.h>
+#include <log/log.h>
 #endif
 
 #include <time.h>

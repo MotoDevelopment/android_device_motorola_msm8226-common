@@ -30,7 +30,7 @@
 #include <utils/Atomic.h>
 #include <utils/Log.h>
 
-#include <cutils/log.h>
+#include <log/log.h>
 
 __BEGIN_DECLS
 

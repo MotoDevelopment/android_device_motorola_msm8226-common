@@ -18,7 +18,7 @@
 #include <string.h>
 
 #define LOG_TAG "libshims_camera"
-#include <cutils/log.h>
+#include <log/log.h>
 #include <cutils/properties.h>
 
 static typeof(property_get) *property_get_real = NULL;

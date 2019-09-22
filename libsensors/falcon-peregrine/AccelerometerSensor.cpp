@@ -16,7 +16,7 @@
  */
 
 #include <string.h>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include "AccelerometerSensor.h"
 #include "AkmSysfs.h"

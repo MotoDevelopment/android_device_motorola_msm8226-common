@@ -17,7 +17,7 @@
 
 #include <fcntl.h>
 #include <string.h>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include "LightProxSensor.h"
 

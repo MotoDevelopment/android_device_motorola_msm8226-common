@@ -22,7 +22,7 @@
 #include <unistd.h>
 #include <dirent.h>
 #include <sys/select.h>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include "sensors.h"
 #include "LightSensor.h"
