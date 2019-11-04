@@ -298,7 +298,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service.moto8226
+    android.hardware.power@1.1-service.moto8226
     
 # Preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
