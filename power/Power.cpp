@@ -46,7 +46,7 @@ Return<void> Power::setInteractive(bool interactive)  {
 }
 
 Return<void> Power::powerHint(PowerHint hint, int32_t data) {
-    power_hint(static_cast<power_hint_t>(hint), &data);
+    power_hint(static_cast<power_hint_t>(hint), data ? (&data) : NULL);
     return Void();
 }
 
@@ -71,36 +71,6 @@ Return<void> Power::getSubsystemLowPowerStats(getSubsystemLowPowerStats_cb _hidl
 Return<void> Power::powerHintAsync(PowerHint hint, int32_t data) {
     // just call the normal power hint in this oneway function
     return powerHint(hint, data);
-}
-
-Return<int32_t> Power::getFeature(LineageFeature feature)  {
-    if (feature == LineageFeature::SUPPORTED_PROFILES) {
-        return get_number_of_profiles();
-    }
-    return -1;
-}
-
-status_t Power::registerAsSystemService() {
-    status_t ret = 0;
-
-    ret = IPower::registerAsService();
-    if (ret != 0) {
-        ALOGE("Failed to register IPower (%d)", ret);
-        goto fail;
-    } else {
-        ALOGI("Successfully registered IPower");
-    }
-
-    ret = ILineagePower::registerAsService();
-    if (ret != 0) {
-        ALOGE("Failed to register ILineagePower (%d)", ret);
-        goto fail;
-    } else {
-        ALOGI("Successfully registered ILineagePower");
-    }
-
-fail:
-    return ret;
 }
 
 }  // namespace implementation
