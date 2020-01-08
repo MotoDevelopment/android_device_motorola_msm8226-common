@@ -162,10 +162,10 @@ USE_DEX2OAT_DEBUG := false
 DONT_DEXPREOPT_PREBUILTS := true
 
 # SELinux
-#include device/qcom/sepolicy-legacy/sepolicy.mk
+include device/qcom/sepolicy-legacy/sepolicy.mk
 
-#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
 
 BOARD_SEPOLICY_DIRS += \
 	$(VENDOR_PATH)/sepolicy-tmp
@@ -189,6 +189,7 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
+DISABLE_EAP_PROXY := true
 TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
